@@ -53,22 +53,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\MobileARCourse\Scripts\BallPrefab.cs" />
-     <Compile Include="Assets\MobileARCourse\Scripts\robotScript.cs" />
- <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Unity3D projects/InteractionUnityXR/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Unity3D projects/InteractionUnityXR/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Unity3D projects/InteractionUnityXR/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
+     <Compile Include="Assets\MobileAR\Scripts\BallPrefab.cs" />
+     <Compile Include="Assets\MobileAR\Scripts\robotScript.cs" />
  <Reference Include="Unity.XR.ARCore">
  <HintPath>C:/Unity3D projects/InteractionUnityXR/Library/ScriptAssemblies/Unity.XR.ARCore.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.XR.ARFoundation.Editor">
+ <HintPath>C:/Unity3D projects/InteractionUnityXR/Library/ScriptAssemblies/Unity.XR.ARFoundation.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro.Editor">
+ <HintPath>C:/Unity3D projects/InteractionUnityXR/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.XR.ARFoundation">
+ <HintPath>C:/Unity3D projects/InteractionUnityXR/Library/ScriptAssemblies/Unity.XR.ARFoundation.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.XR.ARCore.Editor">
  <HintPath>C:/Unity3D projects/InteractionUnityXR/Library/ScriptAssemblies/Unity.XR.ARCore.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.PackageManagerUI.Editor">
+ <HintPath>C:/Unity3D projects/InteractionUnityXR/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.XR.ARExtensions">
  <HintPath>C:/Unity3D projects/InteractionUnityXR/Library/ScriptAssemblies/Unity.XR.ARExtensions.dll</HintPath>
@@ -76,11 +79,8 @@
  <Reference Include="Unity.XR.ARExtensions.Editor">
  <HintPath>C:/Unity3D projects/InteractionUnityXR/Library/ScriptAssemblies/Unity.XR.ARExtensions.Editor.dll</HintPath>
  </Reference>
- <Reference Include="Unity.XR.ARFoundation.Editor">
- <HintPath>C:/Unity3D projects/InteractionUnityXR/Library/ScriptAssemblies/Unity.XR.ARFoundation.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.XR.ARFoundation">
- <HintPath>C:/Unity3D projects/InteractionUnityXR/Library/ScriptAssemblies/Unity.XR.ARFoundation.dll</HintPath>
+ <Reference Include="Unity.TextMeshPro">
+ <HintPath>C:/Unity3D projects/InteractionUnityXR/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
