@@ -161,3 +161,8 @@ C:\Unity3D projects\InteractionUnityXR\Temp\bin\Debug\UnityEngine.ClusterRendere
 C:\Unity3D projects\InteractionUnityXR\Temp\bin\Debug\UnityEngine.ParticlesLegacyModule.xml
 C:\Unity3D projects\InteractionUnityXR\obj\Debug\Assembly-CSharp.dll
 C:\Unity3D projects\InteractionUnityXR\obj\Debug\Assembly-CSharp.pdb
+C:\Unity3D projects\InteractionUnityXR\Temp\bin\Debug\Unity.PackageManagerUI.Editor.dll
+C:\Unity3D projects\InteractionUnityXR\Temp\bin\Debug\Unity.TextMeshPro.Editor.dll
+C:\Unity3D projects\InteractionUnityXR\Temp\bin\Debug\Unity.XR.ARCore.Editor.dll
+C:\Unity3D projects\InteractionUnityXR\Temp\bin\Debug\Unity.XR.ARExtensions.Editor.dll
+C:\Unity3D projects\InteractionUnityXR\Temp\bin\Debug\Unity.XR.ARFoundation.Editor.dll

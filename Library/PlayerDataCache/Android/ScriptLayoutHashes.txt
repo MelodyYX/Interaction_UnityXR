@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-C:/Unity3D projects/InteractionUnityXR/IAR.apk
+C:/Unity3D projects/InteractionUnityXR/IAR2.0.apk
 SceneListBegin?
 Assets/Scenes/MainScene.unity
 SceneListEnd?
@@ -114,7 +114,7 @@ da21fc3f8056b1f91c3dd09c7bf4f90a UnityEngine.Networking.dll:UnityEngine.Networki
 529a95e9e8e7686c4816e08fbb37183f UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 fc061f3ae8a876c0687e86378d4a447c UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 7ca56e063bd071986fff4f513cc4f477 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
-49e9ed8cf23032453ac84d3bc0bb7826 Assembly-CSharp.dll:.ARInteractionScript
+879071559508ae0ea92d94f69ce15c7b Assembly-CSharp.dll:.ARInteractionScript
 0a006f3734181ba8b26758f0866152c0 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 85c574054f28d540e71faf73c6a2b1a2 Unity.XR.ARFoundation.dll:UnityEngine.XR.ARFoundation.ARPlane
 d75dc834c5dec688db75a55a1724c90f UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
