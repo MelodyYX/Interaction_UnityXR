@@ -10,14 +10,14 @@ Detecting and visualizing the real world geometry, adding virtual content and in
 AR Planes and Point Clouds are displayed on the screen to represent the planes and points which are detected from the real environment.
 
 * IAR 2.0: AR Robot Added.
-Click the AR plane on the screen and an AR robot will be created on the selected location. Light estimation added to increase the realism of the robot.
+Click the AR plane on the screen and an AR robot will be created on the selected location. Light estimation added to make the robot more realistic.
 
-* IAR 3.0: AR Balls Added.
-Click 'Fire' button, a ball will be shot and interact with AR trackables, the robot will move when it is hit by a ball.
+* IAR 3.0: Ball interaction Added.
+Click 'Fire' button, a ball will be shot and interact with AR trackables, the robot will move when it is hit by a ball。 Occlusion Shader added to make AR planes more realistic.
 
 * Testing info displayed on the screen:
-Image to represent the real world's light color.
-AR system stage.
-Number of AR planes and PointClouds.
+Image to represent the real world's light color；
+AR system stage；
+Number of AR planes and PointClouds；
 Nubmer of balls shot.
 
