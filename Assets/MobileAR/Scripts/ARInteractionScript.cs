@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.Experimental.XR;
+using UnityEngine.EventSystems;
 
 
 [RequireComponent(typeof(ARSessionOrigin))]
@@ -19,20 +20,21 @@ public class ARInteractionScript : MonoBehaviour {
 	[SerializeField] ARPointCloudManager m_PointCloudManager;
 
 	[SerializeField] GameObject m_robotObject; 
+	[SerializeField] GameObject m_ballObject;
 
 	[SerializeField] Light d_light;
 	[SerializeField] Image m_colorImage;
 
 
-
 	int nPlane = 0;
 	int nPoints = 0;
+	int nShotBall =0;
 	List<Vector3> pointList = new List<Vector3>();
 
 	ARSessionOrigin m_SessionOrigin;
 	static List<ARRaycastHit> hitResults = new List<ARRaycastHit>();
 	public GameObject createRobot {get; private set;}//The object instantiated as a result of a successful raycast hit with a plane
-
+	public GameObject newBall {get; private set;}
 	public float? m_brightness;
 	public float? m_colorTemperature;
 	public Color? m_colorCorrection;
@@ -95,7 +97,8 @@ public class ARInteractionScript : MonoBehaviour {
 
 	// Display the result on the screen 
 	void displayCountText(){
-		m_CountText.text = "PL:" + nPlane + "  PC:" + nPoints;
+		//m_CountText.text = "PL:" + nPlane + "  PC:" + nPoints;
+		m_CountText.text = "PL:" + nPlane + "  PC:" + nPoints+" shot:"+nShotBall;//for test
 	}
 
 	void LightAdjustment(ARCameraFrameEventArgs cameraFrame_Args){
@@ -119,6 +122,13 @@ public class ARInteractionScript : MonoBehaviour {
 			
 	}
 
+	public void ShootBall(){
+		newBall = Instantiate<GameObject> (m_ballObject);
+		newBall.transform.position = Camera.current.transform.position;
+		Rigidbody rigBall = newBall.GetComponent<Rigidbody> ();
+		rigBall.AddForce (100 * Camera.current.transform.forward, ForceMode.Impulse);
+		nShotBall++;//for test
+	}
 
 	void Awake(){
 		m_SessionOrigin = GetComponent<ARSessionOrigin> ();
@@ -127,20 +137,31 @@ public class ARInteractionScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		
-		if (Input.touchCount == 0) {
-			return;
-		}
-	
-		// if the raycast hit a plane, then place a robot
-		if (m_SessionOrigin.Raycast(Input.GetTouch(0).position, hitResults, UnityEngine.Experimental.XR.TrackableType.PlaneWithinPolygon)){
+		if(Input.touchCount>0 && Input.GetTouch(0).phase == TouchPhase.Began){
+			
+			if (EventSystem.current.IsPointerOverGameObject (Input.GetTouch(0).fingerId)) {
+				return;
 
-			var hitPose = hitResults [0].pose;
-			if (createRobot == null) {
-				createRobot = Instantiate (m_robotObject, hitPose.position, hitPose.rotation);
 			} else {
-				createRobot.transform.position = hitPose.position;
-			}
+				// if the raycast hit a plane, then place a robot
+				if (m_SessionOrigin.Raycast(Input.GetTouch(0).position, hitResults, UnityEngine.Experimental.XR.TrackableType.PlaneWithinPolygon)){
 
+					//get the touch position on screen
+					var hitPose = hitResults [0].pose;
+
+					//Instantiate a robot if it doesn't exist 
+					if (createRobot == null) {
+						createRobot = Instantiate (m_robotObject, hitPose.position, hitPose.rotation);
+						Rigidbody rigRobot = createRobot.GetComponent<Rigidbody> ();
+						rigRobot.isKinematic = false;
+						rigRobot.velocity = new Vector3(0, 0, 0);
+						rigRobot.angularVelocity = new Vector3 (0,0,0);
+
+					} else {
+						createRobot.transform.position = hitPose.position;
+					}
+				}
+			}
 		}
 		
 	}
