@@ -117,7 +117,7 @@ public class ARInteractionScript : MonoBehaviour {
 		if(cameraFrame_Args.lightEstimation.colorCorrection.HasValue){
 			m_colorCorrection = cameraFrame_Args.lightEstimation.colorCorrection.Value;
 			d_light.color = m_colorCorrection.Value;
-			m_colorImage.color = m_colorCorrection.Value;
+			m_colorImage.color = m_colorCorrection.Value*d_light.intensity;
 		}
 			
 	}
@@ -154,9 +154,8 @@ public class ARInteractionScript : MonoBehaviour {
 						createRobot = Instantiate (m_robotObject, hitPose.position, hitPose.rotation);
 						Rigidbody rigRobot = createRobot.GetComponent<Rigidbody> ();
 						rigRobot.isKinematic = false;
-						rigRobot.velocity = new Vector3(0, 0, 0);
-						rigRobot.angularVelocity = new Vector3 (0,0,0);
-
+						rigRobot.velocity = Vector3.zero;
+						rigRobot.angularVelocity = Vector3.zero;
 					} else {
 						createRobot.transform.position = hitPose.position;
 					}
